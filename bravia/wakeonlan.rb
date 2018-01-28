@@ -3,18 +3,16 @@
 require_relative 'configuration'
 
 module Bravia
-  module Wakeonlan
-    module_function
-
-    def perform
+  class Wakeonlan
+    def call
       system(wakeonlan)
     end
 
     private
 
     def wakeonlan
-      wakeonlan = File.join(path, 'wakeonlan')
-      "#{wakeonlan} #{mac_address}"
+      script = File.join(path, 'wakeonlan')
+      "#{script} #{mac_address}"
     end
 
     def path

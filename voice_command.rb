@@ -19,6 +19,6 @@ module VoiceCommand
   end
 
   def normalize(param)
-    param.to_s.delete('').downcase
+    param.to_s.delete(' ').downcase
   end
 end

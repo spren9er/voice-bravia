@@ -25,7 +25,7 @@ Bravia::Command.build do
   register :sat1,       '304'
   register :pro7,       '305'
   register :vox,        '306'
-  register :kabeleins,  '307'
+  register :kabel1,     '307'
   register :rtl2,       '308'
   register :'3sat',     '309'
   register :arte,       '310'
@@ -34,7 +34,7 @@ Bravia::Command.build do
 end
 
 VoiceCommand.build do
-  register %i[an ein],                  -> { Wakeonlan }
+  register %i[an ein],                  Bravia::Wakeonlan.new
   register :aus,                        Bravia::Command[:off]
   register %i[leise laut still stumm],  Bravia::Command[:mute]
   register :appletv,                    Bravia::Command[:source_ap]
@@ -42,15 +42,15 @@ VoiceCommand.build do
   register :ard,                        Bravia::Command[:ard]
   register :zdf,                        Bravia::Command[:zdf]
   register :rtl,                        Bravia::Command[:rtl]
-  register :sat1,                       Bravia::Command[:sat1]
-  register :pro7,                       Bravia::Command[:pro7]
+  register %i[sat1 sateins],            Bravia::Command[:sat1]
+  register %i[pro7 prosieben],          Bravia::Command[:pro7]
   register :vox,                        Bravia::Command[:vox]
-  register :kabeleins,                  Bravia::Command[:kabeleins]
-  register :rtl2,                       Bravia::Command[:rtl2]
-  register :'3sat',                     Bravia::Command[:'3sat']
+  register %i[kabel1 kabeleins],        Bravia::Command[:kabel1]
+  register %i[rtl2 rtlzwei],            Bravia::Command[:rtl2]
+  register %i[3sat dreisat],            Bravia::Command[:'3sat']
   register :arte,                       Bravia::Command[:arte]
   register :servustv,                   Bravia::Command[:servustv]
-  register :sport1,                     Bravia::Command[:sport1]
+  register %i[sport1 sporteins],        Bravia::Command[:sport1]
 end
 
 get '/tv/:command' do |command|
