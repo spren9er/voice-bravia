@@ -30,7 +30,7 @@ Bravia::Command.build do
   register :'3sat',     '309'
   register :arte,       '310'
   register :servustv,   '311'
-  register :sport1,     '504'
+  register :sport1,     '540'
 end
 
 VoiceCommand.build do
