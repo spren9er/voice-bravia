@@ -14,23 +14,27 @@ Bravia.config do |config|
 end
 
 Bravia::Command.build do
-  register :on,         :on
-  register :off,        :off
-  register :mute,       :mute
-  register :source_ap,  %i[input input]
-  register :source_tv,  %i[input input input]
-  register :ard,        '001'
-  register :zdf,        '002'
-  register :rtl,        '303'
-  register :sat1,       '304'
-  register :pro7,       '305'
-  register :vox,        '306'
-  register :kabel1,     '307'
-  register :rtl2,       '308'
-  register :'3sat',     '309'
-  register :arte,       '310'
-  register :servustv,   '311'
-  register :sport1,     '540'
+  register :on,           :on
+  register :off,          :off
+  register :mute,         :mute
+  register :channel_up,   :channel_up
+  register :channel_down, :channel_down
+  register :volume_up,    :volume_up
+  register :volume_down,  :volume_down
+  register :source_ap,    %i[input input]
+  register :source_tv,    %i[input input input]
+  register :ard,          '001'
+  register :zdf,          '002'
+  register :rtl,          '303'
+  register :sat1,         '304'
+  register :pro7,         '305'
+  register :vox,          '306'
+  register :kabel1,       '307'
+  register :rtl2,         '308'
+  register :'3sat',       '309'
+  register :arte,         '310'
+  register :servustv,     '311'
+  register :sport1,       '540'
 end
 
 VoiceCommand.build do
