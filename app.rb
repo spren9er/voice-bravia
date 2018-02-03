@@ -14,36 +14,36 @@ Bravia.config do |config|
 end
 
 Bravia::Command.build do
-  register :on,           :on
-  register :off,          :off
-  register :mute,         :mute
-  register :channel_up,   :channel_up
-  register :channel_down, :channel_down
-  register :volume_up,    %i[volume_up volume_up]
-  register :volume_down,  %i[volume_down volume_down]
-  register :source_ap,    %i[input input]
-  register :source_tv,    %i[input input input]
-  register :ard,          '001'
-  register :zdf,          '002'
-  register :rtl,          '303'
-  register :sat1,         '304'
-  register :pro7,         '305'
-  register :vox,          '306'
-  register :kabel1,       '307'
-  register :rtl2,         '308'
-  register :'3sat',       '309'
-  register :arte,         '310'
-  register :servustv,     '311'
-  register :sport1,       '540'
+  register :on,             :on
+  register :off,            :off
+  register :mute,           :mute
+  register :volume_up,      %i[volume_up volume_up]
+  register :volume_down,    %i[volume_down volume_down]
+  register :source_appletv, %i[input input]
+  register :source_tv,      %i[input input input]
+  register :channel_up,     :channel_up
+  register :channel_down,   :channel_down
+  register :ard,            '001'
+  register :zdf,            '002'
+  register :rtl,            '303'
+  register :sat1,           '304'
+  register :pro7,           '305'
+  register :vox,            '306'
+  register :kabel1,         '307'
+  register :rtl2,           '308'
+  register :'3sat',         '309'
+  register :arte,           '310'
+  register :servustv,       '311'
+  register :sport1,         '540'
 end
 
 VoiceCommand.build do
   register %i[an ein],                  Bravia::Wakeonlan.new
   register :aus,                        Bravia::Command[:off]
+  register %i[still stumm],             Bravia::Command[:mute]
   register %i[laut lauter],             Bravia::Command[:volume_up]
   register %i[leise leiser],            Bravia::Command[:volume_down]
-  register %i[still stumm],             Bravia::Command[:mute]
-  register :appletv,                    Bravia::Command[:source_ap]
+  register :appletv,                    Bravia::Command[:source_appletv]
   register :tv,                         Bravia::Command[:source_tv]
   register :hoch,                       Bravia::Command[:channel_up]
   register :runter,                     Bravia::Command[:channel_down]
