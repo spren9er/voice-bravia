@@ -36,9 +36,13 @@ end
 VoiceCommand.build do
   register %i[an ein],                  Bravia::Wakeonlan.new
   register :aus,                        Bravia::Command[:off]
-  register %i[leise laut still stumm],  Bravia::Command[:mute]
+  register %i[laut lauter],             Bravia::Command[:volume_up]
+  register %i[leise leiser],            Bravia::Command[:volume_down]
+  register %i[still stumm],             Bravia::Command[:mute]
   register :appletv,                    Bravia::Command[:source_ap]
   register :tv,                         Bravia::Command[:source_tv]
+  register :hoch,                       Bravia::Command[:channel_up]
+  register :runter,                     Bravia::Command[:channel_down]
   register :ard,                        Bravia::Command[:ard]
   register :zdf,                        Bravia::Command[:zdf]
   register :rtl,                        Bravia::Command[:rtl]

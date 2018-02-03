@@ -7,9 +7,9 @@ module Bravia
     IRCC_CODES = {
       'off'          => 'AAAAAQAAAAEAAAAvAw==',
       'input'        => 'AAAAAQAAAAEAAAAlAw==',
+      'mute'         => 'AAAAAQAAAAEAAAAUAw==',
       'volume_up'    => 'AAAAAQAAAAEAAAASAw==',
       'volume_down'  => 'AAAAAQAAAAEAAAATAw==',
-      'mute'         => 'AAAAAQAAAAEAAAAUAw==',
       'channel_up'   => 'AAAAAQAAAAEAAAAQAw==',
       'channel_down' => 'AAAAAQAAAAEAAAARAw==',
       'num0'         => 'AAAAAQAAAAEAAAAJAw==',
