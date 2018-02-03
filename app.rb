@@ -19,8 +19,8 @@ Bravia::Command.build do
   register :mute,         :mute
   register :channel_up,   :channel_up
   register :channel_down, :channel_down
-  register :volume_up,    :volume_up
-  register :volume_down,  :volume_down
+  register :volume_up,    %i[volume_up volume_up]
+  register :volume_down,  %i[volume_down volume_down]
   register :source_ap,    %i[input input]
   register :source_tv,    %i[input input input]
   register :ard,          '001'
