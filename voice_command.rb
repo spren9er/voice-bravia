@@ -13,9 +13,7 @@ module VoiceCommand
   end
 
   def register(voices, command)
-    [*voices].each do |v|
-      @voice_commands[v.to_s] = command
-    end
+    [*voices].each { |v| @voice_commands[v.to_s] = command }
   end
 
   def normalize(param)
