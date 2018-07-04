@@ -10,7 +10,7 @@ set :bind, '0.0.0.0'
 Bravia.config do |config|
   config.wakeonlan_path = File.join(File.dirname(__FILE__), 'vendor')
   config.ip_address     = '192.168.178.26'
-  config.mac_address    = '34:68:95:17:85:15'
+  config.mac_address    = '15:34:68:95:17:85'
 end
 
 Bravia::Command.build do
