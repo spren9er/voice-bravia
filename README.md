@@ -37,6 +37,13 @@ In order to turn on your TV there is an additional software necessary. You can d
 
 ## IFTTT
 
-Now you have to connect your Google Home with your Sinatra app.
+The last step is to trigger a web request when you give a voice command to your Google Home.
 You can accomplish this by using a service like IFTTT. It offers recipes for `Google Assistant` and `Webhooks`. In IFTTT you choose a trigger command like `Bravia $`. The `$` is a placeholder for your voice command.
-Then you have to supply the URL to your service. Make sure that your voice command will be added to your URL by using `<<<{{TextField}}>>>`. Note that your local server needs to configured such, that the outside world can talk to your Sinatra app.
+Then you have to supply the URL to your service. Make sure that your voice command will be added to your URL.
+The URL should look something like this
+
+ˋˋˋ
+https://your-domain.com/tv/<<<{{TextField}}>>>
+ˋˋˋ
+
+__Note__ Your local server needs to configured such, that the outside world can talk to your Sinatra app.
