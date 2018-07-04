@@ -30,7 +30,9 @@ In order to turn on your TV there is an additional software necessary. You can d
 
 ## Sinatra App
 
-1. Configure the Bravia settings in `app.rb`. You have to supply `ip address` and `mac address` of your TV.
+All settings have to be configured in `app.rb`.
+
+1. Configure the Bravia TV settings; you have to supply `ip address` and `mac address` of your TV.
 2. Register the commands you want to use for your TV. The actions defined on the right side are triggered by the registered key word.
 3. Register your voice commands. On the left side you can choose the trigger voice command (use the same language which is configured in your Google Home), on the right side the corresponding Bravia command.
 4. Run the Sinatra app.
@@ -43,7 +45,7 @@ Then you have to supply the URL to your service. Make sure that your voice comma
 The URL should look something like this
 
 ```
-https://your-domain.com/tv/<<<{{TextField}}>>>
+https://your-domain-or-dns-service.com/tv/<<<{{TextField}}>>>
 ```
 
-__Note__ Your local server needs to configured such, that the outside world can talk to your Sinatra app.
+__Note:__ Your local server needs to configured such, that the outside world can talk to your Sinatra app.
