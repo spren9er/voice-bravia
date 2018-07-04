@@ -42,8 +42,8 @@ You can accomplish this by using a service like IFTTT. It offers recipes for `Go
 Then you have to supply the URL to your service. Make sure that your voice command will be added to your URL.
 The URL should look something like this
 
-ˋˋˋ
+```
 https://your-domain.com/tv/<<<{{TextField}}>>>
-ˋˋˋ
+```
 
 __Note__ Your local server needs to configured such, that the outside world can talk to your Sinatra app.
