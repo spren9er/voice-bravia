@@ -63,5 +63,4 @@ end
 
 get '/tv/:command' do |command|
   VoiceCommand[command]&.call
-  puts "command: #{command}"
 end
