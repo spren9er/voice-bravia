@@ -41,11 +41,10 @@ All settings have to be configured in `app.rb`.
 
 The last step is to trigger a web request when you give a voice command to your Google Home.
 You can accomplish this by using a service like IFTTT. It offers recipes for `Google Assistant` and `Webhooks`. In IFTTT you choose a trigger command like `Bravia $`. The `$` is a placeholder for your voice command.
-Then you have to supply the URL to your service. Make sure that your voice command will be added to your URL.
-The URL should look something like this
+After that you have to supply the URL to your service. Make sure that the voice command will be added to your URL; it should look something like this
 
 ```
-https://your-domain-or-dns-service.com/tv/<<<{{TextField}}>>>
+https://your-domain-or-dns-service/tv/<<<{{TextField}}>>>
 ```
 
 __Note:__ Your local server needs to configured such, that the outside world can talk to your Sinatra app.
