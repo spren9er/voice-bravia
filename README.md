@@ -26,7 +26,7 @@ Now you can communicate with your Bravia TV over your local network.
 
 ## WakeOnLan Script
 
-In order to turn on your TV there is an additional software necessary. You can download `wakeonlan` script [here](http://github.com/jpoliv/wakeonlan) and place the script under a `vendor` directory inside `voice-bravia`.
+In order to turn on your TV there is additional software necessary. You can download `wakeonlan` script [here](http://github.com/jpoliv/wakeonlan) and place the script under a `vendor` directory inside `voice-bravia`.
 
 ## Sinatra App
 
