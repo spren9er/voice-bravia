@@ -57,4 +57,4 @@ When using a HomePod, you can trigger a command via Shortcuts App of one of your
 https://your-domain-or-dns-service/tv/[TextParameter]
 ```
 
-and call the URL
+and call the URL.
